@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    
+<!--    <EditText-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="숫자1"-->
+<!--        hint/>-->
+
+<!--아래와 같은 화면 디자인을 구현하시오.-->
+<!--    EditText : 2개-->
+<!--    Button : 4개-->
+<!--    TextView : 1개-->
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자2"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- android:layout_weight 속성은 여유공간을 사용하는 비율 -->
+        <!-- android:layout_width="0dp" => layout_weight 를 사용 할 때는 크기를 0dp 로 두는게 좋다. -->
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="calcButtonClicked"
+            android:text="더하기" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="calcButtonClicked"
+            android:text="빼기" />
+
+        <Button
+            android:id="@+id/buttonMulti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="calcButtonClicked"
+            android:text="곱하기" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="calcButtonClicked"
+            android:text="나누기" />
+    </LinearLayout>
+
+    <!-- android:gravity 속성은 엘리먼트 안에 있는 요소를 정렬한다. -->
+    <TextView
+        android:id="@+id/textViewCalcResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfdfdf"
+        android:gravity="center"
+        android:hint="결과"
+        android:padding="10dp" />
+
+
+</LinearLayout>
