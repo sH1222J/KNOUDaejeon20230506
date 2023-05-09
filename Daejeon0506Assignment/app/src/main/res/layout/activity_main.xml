@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    
-<!--    <EditText-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="숫자1"-->
-<!--        hint/>-->
+
 
 <!--아래와 같은 화면 디자인을 구현하시오.-->
 <!--    EditText : 2개-->
